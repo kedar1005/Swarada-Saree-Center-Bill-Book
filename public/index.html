@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Bill Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Swarada Saree Center - Digital Bill Book</h1>
+    </header>
+
+    <main>
+        <!-- Bill Form -->
+        <form id="billForm">
+            <h2>Customer Details</h2>
+            <label for="customerName">Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+
+            <label for="customerAddress">Address:</label>
+            <textarea id="customerAddress" name="customerAddress" required></textarea>
+
+            <label for="customerPhone">Phone Number:</label>
+            <input type="tel" id="customerPhone" name="customerPhone" required>
+
+            <label for="productPhoto">Upload Product Photo:</label>
+            <input type="file" id="productPhoto" name="productPhoto" accept="image/*" required>
+
+            <h2>Bill Details</h2>
+            <label for="billDate">Date:</label>
+            <input type="date" id="billDate" name="billDate" required>
+
+            <label for="billAmount">Amount:</label>
+            <input type="number" id="billAmount" name="billAmount" required>
+
+            <button type="submit">Generate Bill</button>
+        </form>
+
+        <!-- Bill Output Section -->
+        <section id="billOutput">
+            <h2>Generated Bill</h2>
+            <div id="billDetails"></div>
+            <button id="printBillBtn">Print Bill</button>
+            <button id="printAddressBtn">Print Address</button>
+        </section>
+
+        <!-- Business Insights Section -->
+        <section id="businessInsights">
+            <h2>Business Insights</h2>
+            <p>Total Bills Generated: <span id="totalBills">0</span></p>
+            <p>Total Amount of Bills: ₹<span id="totalAmount">0</span></p>
+        </section>
+
+        <!-- Search Section -->
+        <section id="searchSection">
+            <h2>Search Customers</h2>
+            <label for="searchInput">Search by Name or Phone:</label>
+            <input type="text" id="searchInput" name="searchInput">
+            <button id="searchBtn">Search</button>
+            <div id="searchResults"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
